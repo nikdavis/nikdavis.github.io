@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.2/workbox-sw.js");
 
 importScripts(
-  "/nikdavis.github.io/precache-manifest.95c8eb97c814056e06c176c5b189c51a.js"
+  "/home-capture-test/precache-manifest.e736883e5e79c62f481c9e75ad3c8393.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/nikdavis.github.io/index.html", {
+workbox.routing.registerNavigationRoute("/home-capture-test/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
