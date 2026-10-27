@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LLM bill parsing · Nik Davis</title>
+  <meta name="description" content="Taking an LLM + OCR utility-bill parser from solo R&D to production at Ivy Energy, and maturing it from hand-tuned prompts to labeled evals and DSPy.">
+  <link rel="canonical" href="https://nikdav.is/work/llm-bill-parsing/">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💜</text></svg>">
+  <link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+<main>
+  <a class="back" href="/">← Nik Davis</a>
+  <h1>LLM bill parsing, from prompts to evals</h1>
+  <p class="tagline">Ivy Energy · solar billing · tech lead</p>
+
+  <h2>The problem</h2>
+  <p>
+    Ivy Energy does solar billing. I owned the billing pipeline end to end: utility data intake, energy accounting, and bill generation. As we grew,
+    input data quality became the main limit on billing accuracy and on expanding nationwide. Utility
+    bills are complex and wildly inconsistent from one utility to the next, and every number we pulled
+    from them ended up on a bill someone paid.
+  </p>
+
+  <h2>What I built</h2>
+  <p>
+    I started an LLM + OCR pipeline as solo R&amp;D to extract charges, rates, and assistance programs
+    from those bills, then led it into production.
+  </p>
+
+  <h2>Making it trustworthy</h2>
+  <p>
+    The first version ran on prompts and schemas defined in a UI. I moved it to labeled eval sets, so
+    every change was measured against known-correct bills, and then to DSPy optimization on top of
+    those evals.
+  </p>
+  <p>
+    The result was consistently more accurate than our legacy vendor on disputed bills: the hard cases,
+    where getting it wrong cost real money and trust.
+  </p>
+
+  <h2>What I took from it</h2>
+  <p>
+    The model was rarely the bottleneck. Measurement was. Once there was a labeled set that reflected the
+    real distribution of bills, improvements became straightforward to make and easy to trust. I've
+    carried that into my current work on coding-agent harnesses, where evals do the same job.
+  </p>
+
+  <footer><a href="/">nikdav.is</a></footer>
+</main>
+</body>
+</html>
